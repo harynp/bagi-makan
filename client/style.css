@@ -150,3 +150,20 @@ body {
 .form-area .input-group {
 	margin-bottom: 2rem;
 }
+
+.show-hover {
+	height: 0;
+	transition: opacity .15s ease-in-out;
+	opacity: 0;
+}
+
+.food-item:hover {
+	transform: scale(1.2);
+	transition: all .15s ease-in-out;
+}
+
+.food-item:hover .show-hover {
+	height: auto;
+	transition: opacity .15s ease-in-out;
+	opacity: 1;
+}
