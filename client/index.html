@@ -1,10 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bagi Makan</title>
+
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- VueJS -->
+		<script src="node_modules/vue/dist/vue.min.js"></script>
+
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="app">
+			<header class="header">
+				<div class="container">
+					<div class="row">
+							<div class="col-md-2 col-sm-12">
+								<h1 class="site-title"><a href="#">BagiMakan</a></h1>
+							</div>
 
+							<div class="col-md-5 col-sm-12">
+								<div class="search-wrapper">
+									<i class="fa fa-search search-icon"></i>
+									<form action="#">
+										<input placeholder="Cari Makanan" type="text" class="form-control search-food" ref="search-food" id="search-food" name="search-food" />
+									</form>
+								</div>
+								<!-- /.search-wrapper -->
+							</div>
+
+							<div class="col-md-5 col-sm-12">
+								<nav class="top-menu">
+									<ul>
+										<li>Selamat Datang, <span id="user">Harry</span></li>
+										<li><a href="#" class="btn btn-home"><i class="fa fa-home"></i></a></li>
+										<li><a href="#" class="btn btn-boxy">Daftar</a></li>
+										<li><a href="#" class="btn btn-boxy">Login</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</header>
+
+			<main class="wrap">
+				<div class="flex-row">
+					<div class="col-10">
+						<div class="grid-gallery">
+							<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/300/300" alt="food" />
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+							<!-- /.food-item -->
+
+							<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/400/400" alt="food" />
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+
+							<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/200/200" alt="food" />
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+							<!-- /.food-item -->
+
+								<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/300/300" alt="food" />
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+							<!-- /.food-item -->
+
+							<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/400/400" alt="food" />
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+
+							<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/200/200" alt="food" />
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+							<!-- /.food-item -->
+
+								<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/300/300" alt="food" />
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+							<!-- /.food-item -->
+
+							<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/400/400" alt="food" />
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+
+							<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/200/200" alt="food" />
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+							<!-- /.food-item -->
+						</div>
+						<!-- /.grid-wrapper -->
+					</div><!-- /.col-10 -->
+				</div>
+			</main>
+			<!-- /.wrap -->
+    </div><!-- /#app -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/packery-mode.pkgd.min.js"></script>
+    <script src="js/isotope-options.js"></script>
+		<script src="scripts.js"></script>
   </body>
 </html>

@@ -1,0 +1,102 @@
+body {
+	background: #ccc;
+}
+
+.header {
+	background: #689F38;
+	color: #fff;
+	padding: 1rem;
+}
+
+.header a {
+	color: #fff;
+}
+
+.header a:hover {
+	color: wheat;
+	text-decoration: none;
+}
+
+.site-title {
+	font-size: 3rem;
+	margin: 0;
+}
+
+	.site-title a:hover, .site-title a:focus {
+		text-decoration: none;
+		color: #FF9800;
+	}
+
+.header .search-wrapper {
+	position: relative;
+}
+
+.header .search-icon {
+	position: absolute;
+	width: 20px;
+	font-size: 2.4rem;
+	left: 1rem;
+	color: #b7b7b7;
+	top: 0.3rem
+}
+
+.form-control.search-food {
+    padding-left: 4rem;
+}
+
+.top-menu {
+	text-align: right;
+}
+
+.top-menu ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.top-menu li {
+	display: inline-block;
+	margin-right: 2rem;
+}
+
+.btn-boxy {
+	border-radius: 0;
+	border: 1px solid #fff;
+}
+
+.btn-boxy:hover {
+	transform: rotate(10deg) scale(1.1);
+	transition: ease-in all 0.3s;
+	border-color: wheat;
+}
+
+.flex-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.col-10 {
+	width: 100%;
+}
+
+.food-item {
+	background: #fff;
+	padding: 1rem;
+	margin: 1rem;
+	box-shadow: 0 4px 6px rgba(0,0,0,.3);
+}
+
+.btn-home {
+	font-size: 2rem;
+}
