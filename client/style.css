@@ -167,3 +167,19 @@ body {
 	transition: opacity .15s ease-in-out;
 	opacity: 1;
 }
+
+.flex-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+}
+
+.login-panel {
+	flex-flow: column;
+	width: 50%;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
