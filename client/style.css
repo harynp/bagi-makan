@@ -1,5 +1,14 @@
 body {
 	background: #ccc;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+.u-full-width {
+	width: 100%;
+}
+
+.no-mt {
+	margin-top: 0;
 }
 
 .header {
@@ -70,6 +79,12 @@ body {
 	border-color: wheat;
 }
 
+.btn-home:hover .fa, .btn-upload:hover .fa {
+	transform: scale(1.5);
+	transition: ease-in all 0.3s;
+	border-color: wheat;
+}
+
 .flex-row {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -91,12 +106,47 @@ body {
 }
 
 .food-item {
+	border-radius: 5px;
+	// flex: 1;
 	background: #fff;
 	padding: 1rem;
 	margin: 1rem;
 	box-shadow: 0 4px 6px rgba(0,0,0,.3);
 }
 
+
 .btn-home {
+  padding: 0 0rem;
 	font-size: 2rem;
+}
+
+.btn-upload {
+	padding: 0 0rem;
+	font-size: 2rem;
+}
+
+.food-pic img {
+	width: 100%;
+}
+
+.grid-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.pic-title {
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+.wrap {
+	margin: 3rem 0;
+}
+
+.panel.user-panel {
+	padding: 1rem;
+}
+
+.form-area .input-group {
+	margin-bottom: 2rem;
 }

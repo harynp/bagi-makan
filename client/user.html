@@ -41,7 +41,7 @@
 									<ul>
 										<li>Selamat Datang, <span id="user">Harry</span></li>
 										<li><a href="#" class="btn btn-home" title="User Feed"><i class="fa fa-home"></i></a></li>
-										<li><a data-toggle="modal" data-target="#postPicModal" href="#" class="btn btn-upload" title="Upload"><i class="fa fa-cloud-upload"></i></a></li>
+										<li><a href="#" class="btn btn-upload" title="Upload"><i class="fa fa-cloud-upload"></i></a></li>
 										<li><a href="#" class="btn btn-boxy" title="Daftar">Daftar</a></li>
 										<li><a href="#" class="btn btn-boxy" title="Login">Login</a></li>
 									</ul>
@@ -55,7 +55,23 @@
 
 			<main class="wrap">
 				<div class="flex-row">
-					<div class="col-10 home-feed">
+					<div class="col-10 user-feed">
+						<div class="panel user-panel">
+							<div class="row">
+								<div class="col-md-2">
+									<img class="img-circle u-full-width" src="http://placeimg.com/200/200/people" alt="avatar" />
+								</div>
+
+								<div class="col-md-10">
+									<h3 class="profile-title">Mark Zukkerberg</h3>
+									<h4 class="post-count no-mt">120 Posts</h4>
+
+									<p>Mark comes to us from the financial world, but she’s an online girl at heart. After graduating from Cal, she spent a couple of years traveling and working (Ireland – NY – OC) before finally making it back to San Francisco to pursue a career in business and marketing. An avid fan of handwritten thank you notes, Mark also loves fresh flowers for any occasion, the sound of being underwater, and she firmly believes ketchup bottles do not belong on the breakfast table. When she’s not Musing, you can find her on her blog, wandering around the Ferry Building in San Francisco, or with her nose in a ridiculously addicting YA book. </p>
+								</div>
+							</div>
+						</div>
+						<!-- /.panel -->
+
 						<div class="grid-gallery">
 							<div class="food-item">
 								<figure class="food-pic">
@@ -110,54 +126,6 @@
 				</div>
 			</main>
 			<!-- /.wrap -->
-
-			<!-- Modal -->
-			<div class="modal fade" id="postPicModal" tabindex="-1" role="dialog" aria-labelledby="postPicModalLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="postPicModalLabel">Modal title</h4>
-						</div>
-						<div class="modal-body form-area">
-
-							<div class="input-group u-full-width">
-								<label>Judul</label>
-								<input type="text" class="form-control" placeholder="Judul gambar yang menarik" name="picTitle" id="picTitle" ref="picTitle">
-							</div>
-
-							<div class="input-group u-full-width">
-								<label>File Gambar</label>
-								<input type="file" class="form-control" placeholder="Judul gambar yang menarik" name="picFile" id="picFile" ref="picFile">
-							</div>
-
-							<div class="input-group u-full-width">
-								<label>Kategori</label>
-								<input type="text" class="form-control" placeholder="Judul gambar yang menarik" name="picCategory" id="picCategory" ref="picCategory">
-							</div>
-
-							<div class="input-group u-full-width">
-								<label>Lokasi</label>
-								<input type="text" class="form-control" placeholder="Judul gambar yang menarik" name="picLocation" id="picLocation" ref="picLocation" list="locations">
-
-								<datalist id="locations">
-									<option value="Burger King">Burger King</option>
-									<option value="Pizza hut">Pizza Hut</option>
-									<option value="Papa Rons">Papa Ron</option>
-									<option value="KFC">KFC Fried</option>
-									<option value="Baba Raffi">Baba Raffi</option>
-									<option value="Food Panda">Food Panda</option>
-								</datalist>
-							</div>
-
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Save changes</button>
-						</div>
-					</div>
-				</div>
-			</div>
     </div><!-- /#app -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
