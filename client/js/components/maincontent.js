@@ -1,3 +1,4 @@
+
 var mainContent = Vue.component('main-content', {
 	template: `
 		<main class="wrap">

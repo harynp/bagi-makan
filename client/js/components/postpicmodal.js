@@ -18,14 +18,13 @@ var postpicModal = Vue.component('postpic-modal', {
 								<label>File Gambar</label>
 								<!-- <input type="file" class="form-control" placeholder="Judul gambar yang menarik" name="picFile" id="picFile" ref="picFile"> -->
 
-								<div class="imageUploader" v-if="!uploadImage">
-
+								<div class="imageUploader" v-if="!imgUrl">
 									<input class="form-control" type="file" @change="onFileChange">
 								</div>
 								<div class="imageUploader" v-else>
 									<div class="row">
 										<div class="col-md-12">
-											<img :src="uploadImage" />
+											<img :src="imgUrl" />
 										</div>
 
 										<div class="col-md-12">
@@ -58,7 +57,7 @@ var postpicModal = Vue.component('postpic-modal', {
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							<button @click.prevent="uploadNewPhotos()" type="button" class="btn btn-primary">Upload Foto</button>
+							<button @click.prevent="uploadNewPhotos()" type="button" data-dismiss="modal" class="btn btn-primary">Upload Foto</button>
 						</div>
 					</div>
 				</div>
@@ -66,27 +65,36 @@ var postpicModal = Vue.component('postpic-modal', {
 		`,
 		data(){
 			return {
-				uploadImage: ''
+				imgUrl: '',
+				imgFile: '',
+				photos: []
 			}
 		},
 		methods : {
 			uploadNewPhotos() {
-				alert("Uploading your photos");
-				console.log("TITLE ", this.$refs.picTitle.value);
-				// console.log(this.uploadImage);
+				console.log("Uploading your photos");
 
-				let data = {
-					title    : this.$refs.picTitle.value,
-					category : this.$refs.picCategory.value,
-					location : this.$refs.picLocation.value,
-					// imgUrl	 : String,
-					// userId   : {
-					// 	type: Schema.Types.ObjectId,
-					// 	ref : 'User'
-					// },
-					// createdAt: Date,
-					// updatedAt: Date
-				};
+				const config = {
+            headers: { 'content-type': 'multipart/form-data' }
+        }
+
+				var formData = new FormData();
+				formData.append('title', this.$refs.picTitle.value);
+				formData.append('category', this.$refs.picCategory.value);
+				formData.append('location', this.$refs.picLocation.value);
+				formData.append('imgUrl', this.imgFile);
+				formData.append('userId', '23423asdasd');
+
+				axios.post('http://localhost:3000/api/foods/', formData, config)
+					.then(food => {
+						alert("Sukses upload Foto!");
+						this.photos = food;
+
+					}).catch(err => {
+						console.log('~~~~~~ERROR')
+						alert("Gagal Upload Foto");
+						console.error(err)
+					});
 			},
 
 			onFileChange(e) {
@@ -97,19 +105,20 @@ var postpicModal = Vue.component('postpic-modal', {
 	    },
 
 	    createImage(file) {
-	      console.log('~~~~ Image ini file', file);
 	      var image = new Image();
 	      var reader = new FileReader();
 	      var vm = this;
 
 	     reader.onload = (e) => {
-	        vm.uploadImage = e.target.result;
+	        vm.imgUrl = e.target.result;
 	      };
+
+	      this.imgFile = file
 	      reader.readAsDataURL(file);
 	    },
 
 	    removeImage(e) {
-	      this.uploadImage = '';
+	      this.imgUrl = '';
 	    }
 	  }
 	}
