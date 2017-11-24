@@ -1,10 +1,9 @@
 function statusChangeCallback(response) {
   console.log('TES',response);
     if (response.status === 'connected') {
-      axios.post('http://localhost:3000/facebook',{headers: {token:response.authResponse.accessToken , id: response.authResponse.userID}})
+      axios.post('http://localhost:3000/facebook',{headers: { token:response.authResponse.accessToken , id: response.authResponse.userID}})
       .then(function (rsp) {
         console.log('~~~~ RSP ', rsp);
-
         localStorage.setItem('jwtTokenApp',rsp.data.token)
         localStorage.setItem('name', rsp.data.name)
         window.location.href = 'index.html'
