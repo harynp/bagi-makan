@@ -4,7 +4,9 @@ var app = new Vue({
 	el: '#app',
 	// State
 	data: {
-		photos: []
+		photos: [],
+		namaname: '',
+		userId: ''
 	},
 	components: {
 
@@ -31,6 +33,8 @@ var app = new Vue({
 	},
 
 	created() {
+		this.name = localStorage.getItem('name');
+		this.userId = localStorage.getItem('id');
 		this.getLatestHomePhotos();
 	}
 })
