@@ -1,0 +1,189 @@
+body {
+	background: #ccc;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+.u-full-width {
+	width: 100%;
+}
+
+.no-mt {
+	margin-top: 0;
+}
+
+.header {
+	background: #689F38;
+	color: #fff;
+	padding: 1rem;
+}
+
+.header a {
+	color: #fff;
+}
+
+.header a:hover {
+	color: wheat;
+	text-decoration: none;
+}
+
+.site-title {
+	font-size: 3rem;
+	margin: 0;
+}
+
+	.site-title a:hover, .site-title a:focus {
+		text-decoration: none;
+		color: #FF9800;
+	}
+
+.header .search-wrapper {
+	position: relative;
+}
+
+.header .search-icon {
+	position: absolute;
+	width: 20px;
+	font-size: 2.4rem;
+	left: 1rem;
+	color: #b7b7b7;
+	top: 0.3rem
+}
+
+.form-control.search-food {
+    padding-left: 4rem;
+}
+
+.top-menu {
+	text-align: right;
+}
+
+.top-menu ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.top-menu li {
+	display: inline-block;
+	margin-right: 2rem;
+}
+
+.btn-boxy {
+	border-radius: 0;
+	border: 1px solid #fff;
+}
+
+.btn-boxy:hover {
+	transform: rotate(10deg) scale(1.1);
+	transition: ease-in all 0.3s;
+	border-color: wheat;
+}
+
+.btn-home:hover .fa, .btn-upload:hover .fa {
+	transform: scale(1.5);
+	transition: ease-in all 0.3s;
+	border-color: wheat;
+}
+
+.flex-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.col-10 {
+	width: 100%;
+}
+
+.food-item {
+	border-radius: 5px;
+	width: 25%;
+	background: #fff;
+	padding: 1rem;
+	margin: 1rem;
+	box-shadow: 0 4px 6px rgba(0,0,0,.3);
+}
+
+
+.btn-home {
+  padding: 0 0rem;
+	font-size: 2rem;
+}
+
+.btn-upload {
+	padding: 0 0rem;
+	font-size: 2rem;
+}
+
+.food-pic img {
+	width: 100%;
+}
+
+.grid-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.pic-title {
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+.wrap {
+	margin: 3rem 0;
+}
+
+.panel.user-panel {
+	padding: 1rem;
+}
+
+.form-area .input-group {
+	margin-bottom: 2rem;
+}
+
+.show-hover {
+	height: 0;
+	transition: opacity .15s ease-in-out;
+	opacity: 0;
+}
+
+.food-item:hover {
+	transform: scale(1.2);
+	transition: all .15s ease-in-out;
+}
+
+.food-item:hover .show-hover {
+	height: auto;
+	transition: opacity .15s ease-in-out;
+	opacity: 1;
+}
+
+.flex-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+}
+
+.login-panel {
+	flex-flow: column;
+	width: 50%;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imageUploader img{
+	width: 300px;
+}

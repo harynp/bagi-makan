@@ -1,11 +1,14 @@
 const Food   = require('../models/foodModel')
-
 class Foodctrl {
 
   static createFood(req, res) {
-    let newFood = new Food(req.body)
-    newFood.save()
-    .then(food => res.status(200).send(food))
+    Food.create({
+      title    : req.body.title,
+      category : req.body.category,
+      location : req.body.location,
+    	imgUrl	 : req.file.cloudStoragePublicUrl
+    })
+    .then(food => res.send(food))
     .catch(err => res.status(500).send(err))
   }
 
@@ -39,7 +42,13 @@ class Foodctrl {
   }
 
   static deleteFoodById(req, res) {
-    Food.findByIdAndRemove(req.params.id)
+    Food.findByIdAndRemove({_id:req.params.id})
+    .then(food => res.status(200).send(food))
+    .catch(err => res.status(500).send(err))
+  }
+
+  static deleteAll (req,res) {
+    Food.remove({})
     .then(food => res.status(200).send(food))
     .catch(err => res.status(500).send(err))
   }

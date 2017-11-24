@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bagi Makan</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500|Lato:400,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- VueJS -->
+		<script src="node_modules/vue/dist/vue.min.js"></script>
+
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+			<header class="header">
+				<div class="container">
+					<div class="row">
+							<div class="col-md-2 col-sm-12">
+								<h1 class="site-title"><a href="#">BagiMakan</a></h1>
+							</div>
+
+							<div class="col-md-5 col-sm-12">
+								<div class="search-wrapper">
+									<i class="fa fa-search search-icon"></i>
+									<form action="#">
+										<input placeholder="Cari Makanan" type="text" class="form-control search-food" ref="search-food" id="search-food" name="search-food" />
+									</form>
+								</div>
+								<!-- /.search-wrapper -->
+							</div>
+
+							<div class="col-md-5 col-sm-12">
+								<nav class="top-menu">
+									<ul>
+										<li>Selamat Datang, <span id="user">Harry</span></li>
+										<li><a href="#" class="btn btn-home" title="User Feed"><i class="fa fa-home"></i></a></li>
+										<li><a href="#" class="btn btn-upload" title="Upload"><i class="fa fa-cloud-upload"></i></a></li>
+										<li><a href="#" class="btn btn-boxy" title="Daftar">Daftar</a></li>
+										<li><a href="#" class="btn btn-boxy" title="Login">Login</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</header>
+
+			<main class="wrap">
+				<div class="flex-row">
+					<div class="col-10 user-feed">
+						<div class="panel user-panel">
+							<div class="row">
+								<div class="col-md-2">
+									<img class="img-circle u-full-width" src="http://placeimg.com/200/200/people" alt="avatar" />
+								</div>
+
+								<div class="col-md-10">
+									<h3 class="profile-title">Mark Zukkerberg</h3>
+									<h4 class="post-count no-mt">120 Posts</h4>
+
+									<p>Mark comes to us from the financial world, but she’s an online girl at heart. After graduating from Cal, she spent a couple of years traveling and working (Ireland – NY – OC) before finally making it back to San Francisco to pursue a career in business and marketing. An avid fan of handwritten thank you notes, Mark also loves fresh flowers for any occasion, the sound of being underwater, and she firmly believes ketchup bottles do not belong on the breakfast table. When she’s not Musing, you can find her on her blog, wandering around the Ferry Building in San Francisco, or with her nose in a ridiculously addicting YA book. </p>
+								</div>
+							</div>
+						</div>
+						<!-- /.panel -->
+
+						<div class="grid-gallery">
+							<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/300/300" alt="food" />
+
+									<figcaption>
+										<h3 class="pic-title">Rendang Mantap @ Raja Rendang</h3>
+									</figcaption>
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+							<!-- /.food-item -->
+
+							<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/400/400" alt="food" />
+
+									<figcaption>
+										<h3 class="pic-title">Rendang Mantap @ Raja Rendang</h3>
+									</figcaption>
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+							<!-- /.food-item -->
+
+							<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/200/200" alt="food" />
+
+									<figcaption>
+										<h3 class="pic-title">Rendang Mantap @ Raja Rendang</h3>
+									</figcaption>
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+							<!-- /.food-item -->
+
+							<div class="food-item">
+								<figure class="food-pic">
+									<img src="http://placeimg.com/500/300" alt="food" />
+
+									<figcaption>
+										<h3 class="pic-title">Rendang Mantap @ Raja Rendang</h3>
+									</figcaption>
+								</figure>
+								<!-- /.food-pic -->
+							</div>
+							<!-- /.food-item -->
+						</div>
+						<!-- /.grid-wrapper -->
+					</div><!-- /.col-10 -->
+				</div>
+			</main>
+			<!-- /.wrap -->
+    </div><!-- /#app -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/packery-mode.pkgd.min.js"></script>
+    <script src="js/isotope-options.js"></script>
+		<script src="scripts.js"></script>
+  </body>
+</html>

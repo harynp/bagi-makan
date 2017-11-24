@@ -1,40 +1,65 @@
-<html>
-<head>
-  <title>Facebook Login JavaScript Example</title>
-  <meta charset="UTF-8">
-  <script type="text/javascript" src="./assets/facebook.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <style media="screen">
-    #fb-root {
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      background: #ffffff8f;
-      border-radius: 30px;
-    }
-    body {
-      background-image: url('https://1x5xwy14hylj3ylgel358cb1-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/THUMBNAIL_BG_02.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  </style>
-</head>
-<body>
-<div id="fb-root">
-  <div class="fb-login-button" onlogin="checkLoginState()" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
-</div>
-</body>
-<script type="text/javascript">
-if(localStorage.getItem('jwtTokenApp')) {
-  document.getElementById("fb-root").style.display = 'none'
-} else {
-  document.getElementById("fb-root").style.display = 'block'
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bagi Makan</title>
+    <script type="text/javascript" src="./assets/facebook.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-function logout () {
-  localStorage.removeItem('jwtTokenApp')
-  window.location.reload()
-}
-</script>
+		<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500|Lato:400,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- VueJS -->
+		<script src="node_modules/vue/dist/vue.min.js"></script>
+
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+			<header class="header">
+				<div class="container">
+					<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<h1 class="site-title text-center"><a href="#">BagiMakan</a></h1>
+							</div>
+						</div>
+						<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</header>
+
+			<main class="wrap">
+				<div class="flex-wrap">
+					<div class="panel login-panel">
+						<h3 class="widgte-title no-mt">Selamat Datang di BagiMakan!  Silahkan login dengan tombol dibawah</h3>
+						<br />
+
+            <div id="fb-root">
+              <div class="fb-login-button" onlogin="checkLoginState()" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+            </div>
+					</div>
+				</div><!-- /.flex-wrap -->
+			</main>
+
+    </div><!-- /#app -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      if(localStorage.getItem('jwtTokenApp')) {
+        document.getElementById("fb-root").style.display = 'none'
+      } else {
+        document.getElementById("fb-root").style.display = 'block'
+      }
+
+      function logout () {
+        localStorage.removeItem('jwtTokenApp')
+        window.location.reload()
+      }
+    </script>
+  </body>
 </html>
