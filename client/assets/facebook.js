@@ -6,7 +6,7 @@ function statusChangeCallback(response) {
         console.log('~~~~ RSP ', rsp);
         localStorage.setItem('jwtTokenApp',rsp.data.token)
         localStorage.setItem('name', rsp.data.name)
-        window.location.href = 'index.html'
+        // window.location.href = 'index.html'
       })
       .catch(function (error) {
         console.log(error);

@@ -1,6 +1,6 @@
-const route = require('express').Router()
-const Zomato = require('../controllers/zomatoController')
+const router = require('express').Router()
+const zomatoController = require('../controllers/zomato')
 
-route.post('/', Zomato.getAddress)
+router.get('/', zomatoController.getLocation)
 
-module.exports = route
+module.exports = router

@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 
 class Facebook {
   static isLogin (req,res) {
-      fbModel.FacebookModel(req.headers.token)
+      fbModel.FacebookModel(req.body.headers.token)
       .then(user => {
         let jwtToken = jwt.sign(user, process.env.SECRET_KEY)
         let decoded = jwt.verify(jwtToken, process.env.SECRET_KEY)
@@ -28,9 +28,6 @@ class Facebook {
           }
         })
         res.send({token: jwtToken, name: decoded.name})
-      })
-      .catch(err => {
-        console.log(err);
       })
   }
 
