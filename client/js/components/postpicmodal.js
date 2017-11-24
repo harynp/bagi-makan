@@ -67,7 +67,7 @@ var postpicModal = Vue.component('postpic-modal', {
 			return {
 				imgUrl: '',
 				imgFile: '',
-				photos: []
+				photo: ''
 			}
 		},
 		methods : {
@@ -83,12 +83,14 @@ var postpicModal = Vue.component('postpic-modal', {
 				formData.append('category', this.$refs.picCategory.value);
 				formData.append('location', this.$refs.picLocation.value);
 				formData.append('imgUrl', this.imgFile);
-				formData.append('userId', '23423asdasd');
+				formData.append('userId', localStorage.getItem('id'));
+				formData.append('nama', localStorage.getItem('name'));
 
 				axios.post('http://localhost:3000/api/foods/', formData, config)
 					.then(food => {
 						alert("Sukses upload Foto!");
-						this.photos = food;
+						// this.photo = food;
+						this.$emit('upload-new-photo', {photo: food});
 
 					}).catch(err => {
 						console.log('~~~~~~ERROR')
