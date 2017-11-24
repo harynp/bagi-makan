@@ -4,7 +4,7 @@ class zomatoCtrl {
   static getAddress (req, res) {
     axios.get(`http://developers.zomato.com/api/v2.1/locations?query=${req.body.place_name}`,{
       headers : {
-        'user-key' : req.headers.apikey
+        'user-key' : '6f7e7987e70dc105330926821cabef62'
       }
     })
     .then(response => {
