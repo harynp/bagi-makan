@@ -13,23 +13,21 @@ var mainContent = Vue.component('main-content', {
 		</main>
 		<!-- /.wrap -->
 	`,
+	props: ['photos'],
 	data(){
 		return {
-			photos: []
+
 		}
 	},
 	methods: {
-		getLatestHomePhotos() {
-			axios.get(rootEndpoint)
-			.then(({data}) => {
-				console.log(data)
-				this.photos = data
 
-			}).catch(err => console.log(err.message));
-		}
+		/*pushLastUpload(payload) {
+			this.photos.push(payload);
+		}*/
 	},
 
 	created() {
-		this.getLatestHomePhotos()
+		// this.pushLastUpload();
+		// this.getLatestHomePhotos()
 	}
 })

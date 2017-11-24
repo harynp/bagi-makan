@@ -67,7 +67,7 @@ var postpicModal = Vue.component('postpic-modal', {
 			return {
 				imgUrl: '',
 				imgFile: '',
-				photos: []
+				photo: ''
 			}
 		},
 		methods : {
@@ -88,7 +88,8 @@ var postpicModal = Vue.component('postpic-modal', {
 				axios.post('http://localhost:3000/api/foods/', formData, config)
 					.then(food => {
 						alert("Sukses upload Foto!");
-						this.photos = food;
+						// this.photo = food;
+						this.$emit('upload-new-photo', {photo: food});
 
 					}).catch(err => {
 						console.log('~~~~~~ERROR')
