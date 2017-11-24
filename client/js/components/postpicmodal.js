@@ -42,7 +42,7 @@ var postpicModal = Vue.component('postpic-modal', {
 
 							<div class="input-group u-full-width">
 								<label>Tempat Makan</label>
-								<input type="text" class="form-control" placeholder="Judul gambar yang menarik" name="picLocation" id="picLocation" ref="picLocation" list="locations">
+								<input type="text" class="form-control" placeholder="Judul gambar yang menarik" id="autocomplete">
 
 								<datalist id="locations">
 									<option value="Burger King">Burger King</option>
