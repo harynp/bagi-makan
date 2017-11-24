@@ -3,7 +3,6 @@ const Food   = require('../models/foodModel')
 class Foodctrl {
 
   static createFood(req, res) {
-    console.log('masuk sini')
     let newFood = new Food(req.body)
     newFood.save()
     .then(food => res.status(200).send(food))
