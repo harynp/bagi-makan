@@ -7,11 +7,7 @@ var app = new Vue({
 		photos: []
 	},
 	components: {
-		'main-header' : mainHeader,
-		'main-content' : mainContent,
-		'postpic-modal': postpicModal
-	},
-	// Methods
 
+	}
 })
 
