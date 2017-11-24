@@ -5,7 +5,7 @@ var app = new Vue({
 	// State
 	data: {
 		photos: [],
-		namaname: '',
+		name: '',
 		userId: ''
 	},
 	components: {

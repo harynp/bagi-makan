@@ -5,7 +5,7 @@ var mainContent = Vue.component('main-content', {
 			<div class="flex-row">
 				<div class="col-10 home-feed">
 					<div class="grid-gallery">
-						<food-item v-for="(photo, index) in photos" :key="index" :photo="photo"></food-item>
+						<food-item v-for="(photo, index) in photos" :key="index" :photo="photo" :name="name"></food-item>
 					</div>
 					<!-- /.grid-wrapper -->
 				</div><!-- /.col-10 -->
@@ -13,7 +13,7 @@ var mainContent = Vue.component('main-content', {
 		</main>
 		<!-- /.wrap -->
 	`,
-	props: ['photos'],
+	props: ['photos', 'name'],
 	data(){
 		return {
 

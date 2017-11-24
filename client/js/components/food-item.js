@@ -8,9 +8,11 @@ var foodItem = Vue.component('food-item', {
 				<h3 class="pic-title">{{ photo.title }} @ {{ photo.location }}</h3>
 
 				<div class="show-hover">
-					<h4 class="pic-owner text-center">By <a href="#">Hary</a></h4>
+					<h4 class="pic-owner text-center">By <a href="#">{{ name }}</a></h4>
 
-					<a v-bind:href="photo.imgUrl" v-bind:download="photo.imgUrl" class="btn btn-warning u-full-width">Download</a>
+					<a v-bind:href="photo.imgUrl" v-bind:download="photo.imgUrl" class="btn btn-warning u-full-width"><i class="fa fa-download"></i> Download</a>
+
+					<a v-bind:href="'http://www.facebook.com/sharer.php?u=' + photo.imgUrl" class="btn btn-info u-full-width"><i class="fa fa-facebook"> </i> Share ke Facebook</a>
 				</div>
 			</figcaption>
 		</figure>
@@ -18,5 +20,5 @@ var foodItem = Vue.component('food-item', {
 	</div>
 	<!-- /.food-item -->
 	`,
-	props: ['photo']
+	props: ['photo', 'name']
 })
