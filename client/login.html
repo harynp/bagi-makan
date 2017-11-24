@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bagi Makan</title>
+    <script type="text/javascript" src="./assets/facebook.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 		<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500|Lato:400,700" rel="stylesheet">
 
@@ -36,7 +38,10 @@
 					<div class="panel login-panel">
 						<h3 class="widgte-title no-mt">Selamat Datang di BagiMakan!  Silahkan login dengan tombol dibawah</h3>
 						<br />
-						<a href="#" class="btn btn-info" style="width: 50%;">Login</a>
+
+            <div id="fb-root">
+              <div class="fb-login-button" onlogin="checkLoginState()" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+            </div>
 					</div>
 				</div><!-- /.flex-wrap -->
 			</main>
@@ -44,5 +49,17 @@
     </div><!-- /#app -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      if(localStorage.getItem('jwtTokenApp')) {
+        document.getElementById("fb-root").style.display = 'none'
+      } else {
+        document.getElementById("fb-root").style.display = 'block'
+      }
+
+      function logout () {
+        localStorage.removeItem('jwtTokenApp')
+        window.location.reload()
+      }
+    </script>
   </body>
 </html>
