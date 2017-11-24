@@ -21,7 +21,7 @@ var mainHeader = Vue.component('main-header', {
 								<nav class="top-menu">
 									<ul>
 										<li>Selamat Datang, <span id="user">Harry</span></li>
-										<li><a href="#" class="btn btn-home" title="User Feed"><i class="fa fa-home"></i></a></li>
+										<li><a href="index.html" class="btn btn-home" title="User Feed"><i class="fa fa-home"></i></a></li>
 										<li><a data-toggle="modal" data-target="#postPicModal" href="#" class="btn btn-upload" title="Upload"><i class="fa fa-cloud-upload"></i></a></li>
 										<li><a href="#" class="btn btn-boxy" title="Logout">Logout</a></li>
 									</ul>
