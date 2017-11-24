@@ -12,7 +12,7 @@ var foodItem = Vue.component('food-item', {
 
 					<a v-bind:href="photo.imgUrl" v-bind:download="photo.imgUrl" class="btn btn-warning u-full-width"><i class="fa fa-download"></i> Download</a>
 
-					<a v-bind:href="'http://www.facebook.com/sharer.php?u=' + photo.imgUrl" class="btn btn-info u-full-width"><i class="fa fa-facebook"> </i> Share ke Facebook</a>
+					<a target="_blank" v-bind:href="'http://www.facebook.com/sharer.php?u=' + photo.imgUrl" class="btn btn-info u-full-width"><i class="fa fa-facebook"> </i> Share ke Facebook</a>
 				</div>
 			</figcaption>
 		</figure>
