@@ -13,7 +13,13 @@ var foodrts = require('./routes/foodRoute')
 var facebook = require('./routes/facebook');
 var app = express();
 var mongoose = require('mongoose')
-mongoose.connect('mongodb://harynp:harynp@pratice-shard-00-00-vajls.mongodb.net:27017,pratice-shard-00-01-vajls.mongodb.net:27017,pratice-shard-00-02-vajls.mongodb.net:27017/bagimakan?ssl=true&replicaSet=Pratice-shard-0&authSource=admin')
+mongoose.connect('mongodb://harynp:harynp@pratice-shard-00-00-vajls.mongodb.net:27017,pratice-shard-00-01-vajls.mongodb.net:27017,pratice-shard-00-02-vajls.mongodb.net:27017/bagimakan?ssl=true&replicaSet=Pratice-shard-0&authSource=admin', (err) => {
+  if(!err) {
+    console.log('DATABASE TERHUBUNG');
+  } else {
+    console.log('TIDAK TERHUBUNG DATABASE');
+  }
+})
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
