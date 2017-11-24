@@ -37,7 +37,28 @@
     <script src="js/components/maincontent.js"></script>
     <script src="js/components/food-item.js"></script>
 
-    <script src="scripts.js"></script>
+    <!-- G.Maps API -->
 
+    <script src="scripts.js"></script>
+    <script type="text/javascript">
+      function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']});
+    
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+      }
+    
+      function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
+    
+      }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMBVWgvC7qe0Jt5RKS0lWDswab20F1WoU&libraries=places&callback=initAutocomplete" async defer></script>
   </body>
 </html>
