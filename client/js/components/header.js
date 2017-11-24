@@ -11,7 +11,7 @@ var mainHeader = Vue.component('main-header', {
 								<div class="search-wrapper">
 									<i class="fa fa-search search-icon"></i>
 									<form action="#">
-										<input placeholder="Cari Makanan" type="text" class="form-control search-food" ref="search-food" id="search-food" name="search-food" />
+										<input placeholder="Cari Makanan" v-model="findText" type="text" class="form-control search-food" ref="search-food" id="search-food" name="search-food" />
 									</form>
 								</div>
 								<!-- /.search-wrapper -->
@@ -33,11 +33,23 @@ var mainHeader = Vue.component('main-header', {
 				<!-- /.container -->
 			</header>
 	`,
+		props: ['photos'],
+		data () {
+	    return {
+	      findText: ''
+	    }
+	  },
 		methods: {
 			logout: function () {
 			localStorage.removeItem('jwtTokenApp')
 			localStorage.removeItem('name')
 			localStorage.removeItem('id')
 			window.location.href = 'login.html'
-		}}
+		},
+		filterMakan: function () {
+			return this.photos.filter((val) => {
+			return val.photos.title.match(this.findText);
+			})
+		}
+	}
 	})
