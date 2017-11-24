@@ -12,127 +12,33 @@
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- VueJS -->
-		<script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
 
 		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="app">
-			<header class="header">
-				<div class="container">
-					<div class="row">
-							<div class="col-md-2 col-sm-12">
-								<h1 class="site-title"><a href="#">BagiMakan</a></h1>
-							</div>
+			<main-header></main-header>
 
-							<div class="col-md-5 col-sm-12">
-								<div class="search-wrapper">
-									<i class="fa fa-search search-icon"></i>
-									<form action="#">
-										<input placeholder="Cari Makanan" type="text" class="form-control search-food" ref="search-food" id="search-food" name="search-food" />
-									</form>
-								</div>
-								<!-- /.search-wrapper -->
-							</div>
+			<main-content></main-content>
 
-							<div class="col-md-5 col-sm-12">
-								<nav class="top-menu">
-									<ul>
-										<li>Selamat Datang, <span id="user">Harry</span></li>
-										<li><a href="#" class="btn btn-home" title="User Feed"><i class="fa fa-home"></i></a></li>
-										<li><a data-toggle="modal" data-target="#postPicModal" href="#" class="btn btn-upload" title="Upload"><i class="fa fa-cloud-upload"></i></a></li>
-										<li><a href="#" class="btn btn-boxy" title="Logout">Logout</a></li>
-									</ul>
-								</nav>
-							</div>
-						</div>
-						<!-- /.row -->
-				</div>
-				<!-- /.container -->
-			</header>
-
-			<main class="wrap">
-				<div class="flex-row">
-					<div class="col-10 home-feed">
-						<div class="grid-gallery">
-							<div class="food-item">
-								<figure class="food-pic">
-									<img src="https://akcdn.detik.net.id/community/media/visual/2016/03/11/b841d606-d335-406b-8c89-24234c477548_169.jpg" alt="food" />
-
-									<figcaption class="pic-detail">
-										<h3 class="pic-title">Rendang Mantap @ Raja Rendang</h3>
-
-										<div class="show-hover">
-											<h4 class="pic-owner text-center">By <a href="#">Hary</a></h4>
-											<a href="https://akcdn.detik.net.id/community/media/visual/2016/03/11/b841d606-d335-406b-8c89-24234c477548_169.jpg" download="https://akcdn.detik.net.id/community/media/visual/2016/03/11/b841d606-d335-406b-8c89-24234c477548_169.jpg" class="btn btn-warning u-full-width">Download</a>
-										</div>
-									</figcaption>
-								</figure>
-								<!-- /.food-pic -->
-							</div>
-							<!-- /.food-item -->
-						</div>
-						<!-- /.grid-wrapper -->
-					</div><!-- /.col-10 -->
-				</div>
-			</main>
-			<!-- /.wrap -->
-
-			<!-- Modal -->
-			<div class="modal fade" id="postPicModal" tabindex="-1" role="dialog" aria-labelledby="postPicModalLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="postPicModalLabel">Upload Foto Makanan</h4>
-						</div>
-						<div class="modal-body form-area">
-
-							<div class="input-group u-full-width">
-								<label>Judul</label>
-								<input type="text" class="form-control" placeholder="Judul gambar yang menarik" name="picTitle" id="picTitle" ref="picTitle">
-							</div>
-
-							<div class="input-group u-full-width">
-								<label>File Gambar</label>
-								<input type="file" class="form-control" placeholder="Judul gambar yang menarik" name="picFile" id="picFile" ref="picFile">
-							</div>
-
-							<div class="input-group u-full-width">
-								<label>Kategori</label>
-								<input type="text" class="form-control" placeholder="Judul gambar yang menarik" name="picCategory" id="picCategory" ref="picCategory">
-							</div>
-
-							<div class="input-group u-full-width">
-								<label>Tempat Makan</label>
-								<input type="text" class="form-control" placeholder="Judul gambar yang menarik" name="picLocation" id="picLocation" ref="picLocation" list="locations">
-
-								<datalist id="locations">
-									<option value="Burger King">Burger King</option>
-									<option value="Pizza hut">Pizza Hut</option>
-									<option value="Papa Rons">Papa Ron</option>
-									<option value="KFC">KFC Fried</option>
-									<option value="Baba Raffi">Baba Raffi</option>
-									<option value="Food Panda">Food Panda</option>
-								</datalist>
-							</div>
-
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Save changes</button>
-						</div>
-					</div>
-				</div>
-			</div>
+			<postpic-modal></postpic-modal>
     </div><!-- /#app -->
-
+    <!-- https://api.unsplash.com/photos?per_page=12&client_id=e773aef1f3e98577ad88894dceff6ebfdcedff8a5de1361b486e5ef131d9044e -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
 		<script src="js/packery-mode.pkgd.min.js"></script>
     <script src="js/isotope-options.js"></script>
+
+    <!-- Vue Components -->
+    <script src="js/components/header.js"></script>
+		<script src=js/components/postpicmodal.js></script>
+		<script src="js/components/maincontent.js"></script>
+    <script src="js/components/food-item.js"></script>
+
 		<script src="scripts.js"></script>
   </body>
 </html>
