@@ -23,7 +23,7 @@ var mainHeader = Vue.component('main-header', {
 										<li>Selamat Datang, <span id="user">Harry</span></li>
 										<li><a href="#" class="btn btn-home" title="User Feed"><i class="fa fa-home"></i></a></li>
 										<li><a data-toggle="modal" data-target="#postPicModal" href="#" class="btn btn-upload" title="Upload"><i class="fa fa-cloud-upload"></i></a></li>
-										<li><a href="#" class="btn btn-boxy" title="Logout">Logout</a></li>
+										<li><a href="#" class="btn btn-boxy" title="Logout" @click="logout()">Logout</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -32,5 +32,12 @@ var mainHeader = Vue.component('main-header', {
 				</div>
 				<!-- /.container -->
 			</header>
-	`
-})
+	`,
+		methods: {
+			logout: function () {
+			localStorage.removeItem('jwtTokenApp')
+			localStorage.removeItem('name')
+			localStorage.removeItem('id')
+			window.location.href = 'login.html'
+		}}
+	})
