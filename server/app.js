@@ -11,6 +11,7 @@ var users = require('./routes/users');
 var userrts = require('./routes/userRoute')
 var foodrts = require('./routes/foodRoute')
 var facebook = require('./routes/facebook');
+var zomato = require('./routes/zomato')
 var app = express();
 var mongoose = require('mongoose')
 mongoose.connect('mongodb://harynp:harynp@pratice-shard-00-00-vajls.mongodb.net:27017,pratice-shard-00-01-vajls.mongodb.net:27017,pratice-shard-00-02-vajls.mongodb.net:27017/bagimakan?ssl=true&replicaSet=Pratice-shard-0&authSource=admin', (err) => {
@@ -36,7 +37,8 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/api/users', userrts)
 app.use('/api/foods', foodrts)
-app.use('/facebook', facebook);
+app.use('/facebook', facebook)
+app.use('/zomato', zomato)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

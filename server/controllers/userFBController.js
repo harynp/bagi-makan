@@ -5,10 +5,13 @@ const mongoose = require('mongoose')
 
 class Facebook {
   static isLogin (req,res) {
+      console.log(req.headers);
       fbModel.FacebookModel(req.headers.token)
       .then(user => {
         let jwtToken = jwt.sign(user, process.env.SECRET_KEY)
+        console.log('JWTTOKEN',jwtToken);
         let decoded = jwt.verify(jwtToken, process.env.SECRET_KEY)
+        console.log('DECODED INI COY',decoded);
         fbModel.userFB.findOne({email: decoded.email})
         .then(user => {
           if (user) {
